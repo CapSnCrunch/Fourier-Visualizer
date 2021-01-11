@@ -3,7 +3,7 @@ import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
 
-current_folder = 'Other/Photo Effects/Images/' # Change depending on your local setup
+current_folder = 'Fourier-Visualizer/Images/' # Change depending on your local setup
 photos = ['bee.jpg', 'flowers.jpg', 'trees.jpg', 'forest.jpg', 'nebula.jpg', 'water.jpg', 'clouds.jpg', 'mountain.jpg', 'city.jpg', 'buildings.jpg']
 
 A, B = (random.randint(0, len(photos)-1), random.randint(0, len(photos)-1))
