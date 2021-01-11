@@ -15,7 +15,7 @@ import pygame.surfarray as surfarray
 fft2, ifft2 = np.fft.fft2, np.fft.ifft2
 fftshift, ifftshift = np.fft.fftshift, np.fft.ifftshift
 
-current_folder = 'Other/Photo Effects/Images/' # Change depending on your local setup
+current_folder = 'Fourier-Visualizer/Images/' # Change depending on your local setup
 images = ['bee.jpg', 'flowers.jpg', 'trees.jpg', 'forest.jpg', 'nebula.jpg', 'water.jpg', 'clouds.jpg', 'mountain.jpg', 'city.jpg', 'buildings.jpg']
 spectrum_images = ['spectra.jpg']
 
