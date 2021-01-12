@@ -5,24 +5,32 @@ from pygame.locals import *
 import pygame.surfarray as surfarray
 
 '''
-    Draw on the pygame window and see the spectrum of the 512x512 image update in real time!
+    Draw on the pygame window and see the spectrum of the image update in real time!
     You can mess with the view_size parameter to zoom in and out on the spectrum.
     Press r to refresh your drawing window.
     Press numpad values to load preselected images.
     Scrolling will shift the drawing color along a grey scale all the way up to white for erasing.
+
+    The most interesting drawings are small dots and lines near the center of the window. Most others will just look like noise.
+
+    Press s to save a inverse-spectrum to the designated save location. The purpose of this is to attempt to get plain images which have some desired spectrum.
+    This is not currently working but it will be a cool way to 'encode' images with a Fourier Transform.
 '''
 
 fft2, ifft2 = np.fft.fft2, np.fft.ifft2
 fftshift, ifftshift = np.fft.fftshift, np.fft.ifftshift
 
+### CHANGE THESE TO USE PRESELECTED IMAGES ###
 current_folder = 'Fourier-Visualizer/Images/' # Change depending on your local setup
+save_directory = 'Fourier-Visualizer/Inverse Spectra/' # Change depending on your local setup
+
 images = ['bee.jpg', 'flowers.jpg', 'trees.jpg', 'forest.jpg', 'nebula.jpg', 'water.jpg', 'clouds.jpg', 'mountain.jpg', 'city.jpg', 'buildings.jpg']
 
 # Parameters
 width = 500
 height = 500
 view_size = 250
-save_directory = 'Fourier-Visualizer/Spectra/'
+
 
 img = np.zeros((width, height))
 
@@ -82,7 +90,6 @@ def main():
                     color = tuple([max(x - 10, 0) for x in color])
 
             elif event.type == KEYDOWN:
-                print(event.key)
                 # Refresh the screen
                 if event.key == 114:
                     screen.fill(WHITE)
@@ -101,7 +108,7 @@ def main():
                         screen.fill(WHITE)
 
                 elif event.key == 115 and not saved:
-                    cv2.imwrite(save_directory + 'spectra.jpg', img)
+                    cv2.imwrite(save_directory + 'inverse-spectra.jpg', img)
                     saved = True
 
         pygame.display.update()
@@ -128,7 +135,7 @@ def main():
         # Normalization
         img = img / img_max
 
-        print(np.min(img), np.max(img))
+        # print(np.min(img), np.max(img))
 
         # Scale view window back up to width x height
         img = np.kron(img, np.ones((int(width / view_size), int(height / view_size))))

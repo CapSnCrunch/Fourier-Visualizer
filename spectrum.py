@@ -5,7 +5,7 @@ from pygame.locals import *
 import pygame.surfarray as surfarray
 
 '''
-    Draw on the pygame window and see the spectrum of the 512x512 image update in real time!
+    Draw on the pygame window and see the spectrum of the image update in real time!
     You can mess with the view_size parameter to zoom in and out on the spectrum.
     Press r to refresh your drawing window.
     Press numpad values to load preselected images.
@@ -15,9 +15,11 @@ import pygame.surfarray as surfarray
 fft2, ifft2 = np.fft.fft2, np.fft.ifft2
 fftshift, ifftshift = np.fft.fftshift, np.fft.ifftshift
 
+### CHANGE THIS TO USE PRESELECTED IMAGES ###
 current_folder = 'Fourier-Visualizer/Images/' # Change depending on your local setup
+
 images = ['bee.jpg', 'flowers.jpg', 'trees.jpg', 'forest.jpg', 'nebula.jpg', 'water.jpg', 'clouds.jpg', 'mountain.jpg', 'city.jpg', 'buildings.jpg']
-spectrum_images = ['spectra.jpg']
+spectrum_images = ['inverse-spectra.jpg']
 
 # Parameters
 width = 500
