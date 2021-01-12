@@ -3,14 +3,16 @@ import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
 
+### CHANGE THIS ###
 current_folder = 'Fourier-Visualizer/Images/' # Change depending on your local setup
 photos = ['bee.jpg', 'flowers.jpg', 'trees.jpg', 'forest.jpg', 'nebula.jpg', 'water.jpg', 'clouds.jpg', 'mountain.jpg', 'city.jpg', 'buildings.jpg']
 
 A, B = (random.randint(0, len(photos)-1), random.randint(0, len(photos)-1))
 
 # Good ones: (1, 4), (2, 6), (3, 5), (4, 5), (4, 6)
-# A, B = (0, 1)
 
+# Things to mess with
+# A, B = (0, 1)
 block_size = 1
 
 img = Image.open(current_folder + photos[A])
