@@ -1,5 +1,5 @@
 # Fourier-Visualizer
-This project is meant to give some visual intuition on the 2-dimensional Fourier Transformation.
+This project is meant to give some visual intuition on the 2-dimensional Fourier Transformation. The program allows users to draw an image while the spectrum of the image is continuously updated in another window. The opposite can be done with inverse-spectrum.py where the user draws the spectrum and the image corresponding to that drawing is displayed in another window.
 
 Running spectrum.py and inverse-spectrum.py requires you have the cv2, numpy, and pygame libraries installed. If you don't, go to terminal and use the commands:
 - pip install opencv-python
