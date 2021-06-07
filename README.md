@@ -21,4 +21,5 @@ Unrelated to the Fourier transform but thought I might put it in the project sin
 <p align='center'>
   <img src='demo imgs/demo1.JPG' width='300'>
   <img src='demo imgs/demo2.JPG' width='300'>
+  Example of flowers + bees and flowers + city
 </p>
