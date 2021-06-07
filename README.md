@@ -18,10 +18,8 @@ Specific details on ways you can interact with the program are listed at the top
 ## weave.py
 Unrelated to the Fourier transform but thought I might put it in the project since it uses the same images. Lets you 'weave' two images together pixel by pixel or, by changing the block-size variable, in larger strips. Output images are fairly interesting:
 
-<p align='center'>
+<p align = 'center'>
   <img src='demo imgs/demo1.JPG' width='300'>
   <img src='demo imgs/demo2.JPG' width='300'>
 </p>
-<p style = 'text-align: center;'>
-  <h1>Example of flowers + bees and flowers + city</h1>
-</p>
+<h1 align = 'center'>Example of flowers + bees and flowers + city</h1>
