@@ -16,7 +16,7 @@ fft2, ifft2 = np.fft.fft2, np.fft.ifft2
 fftshift, ifftshift = np.fft.fftshift, np.fft.ifftshift
 
 ### CHANGE THIS TO USE PRESELECTED IMAGES ###
-current_folder = 'Fourier-Visualizer/Images/' # Change depending on your local setup
+current_folder = 'Git/Fourier-Visualizer/Images/' # Change depending on your local setup
 
 images = ['bee.jpg', 'flowers.jpg', 'trees.jpg', 'forest.jpg', 'nebula.jpg', 'water.jpg', 'clouds.jpg', 'mountain.jpg', 'city.jpg', 'buildings.jpg']
 spectrum_images = ['inverse-spectra.jpg']
@@ -24,7 +24,7 @@ spectrum_images = ['inverse-spectra.jpg']
 # Parameters
 width = 500
 height = 500
-view_size = 500
+view_size = 250
 
 def main():
     pygame.init()
@@ -126,6 +126,9 @@ def main():
 
         # Scale view window back up to width x height
         img = np.kron(img, np.ones((int(width / view_size), int(height / view_size))))
+
+        # Flip scale
+        # img = np.ones((width, height)) - img
 
         cv2.imshow('Image Spectrum', img)
         cv2.waitKey(30) # Gives time to handle user input

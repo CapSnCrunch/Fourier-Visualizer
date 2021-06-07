@@ -31,7 +31,6 @@ width = 500
 height = 500
 view_size = 250
 
-
 img = np.zeros((width, height))
 
 def main():
