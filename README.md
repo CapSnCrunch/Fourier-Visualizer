@@ -12,7 +12,7 @@ Specific details on ways you can interact with the program are listed at the top
 
 <p align='center'>
   <img src='demo imgs/demo3.JPG' width='600'>
-  <h5 align = 'center'>Example drawing and its spectrum</h5>
+  <h5 align = 'center'>Example of drawing and its spectrum</h5>
 </p>
 
 
