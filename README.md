@@ -14,5 +14,6 @@ Specific details on ways you can interact with the program are listed at the top
 Unrelated to the Fourier transform but thought I might put it in the project since it uses the same images. Lets you 'weave' two images together pixel by pixel or, by changing the block-size variable, in larger strips. Output images are fairly interesting.
 
 <p align='center'>
-  <img src='demo imgs/demo1.jpg' width='400'>
+  <img src='demo imgs/demo1.JPG' width='400'>
+  <img src='demo imgs/demo2.JPG' width='400'>
 </p>
