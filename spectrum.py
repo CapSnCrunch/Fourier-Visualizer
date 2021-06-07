@@ -24,7 +24,7 @@ spectrum_images = ['inverse-spectra.jpg']
 # Parameters
 width = 500
 height = 500
-view_size = 250
+view_size = 250 # Make smaller for a closer look at the spectrum
 
 def main():
     pygame.init()
